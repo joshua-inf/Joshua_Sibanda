@@ -1,0 +1,24 @@
+.black {
+    background-color: #ddd;
+}
+
+.white .A-cont-1{
+    color: black;
+    margin: 50px;
+    bottom: 50%;
+}
+.content {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+.A-cont {
+    bottom: 50%;
+    font-size: 30px;
+    margin: 0px 10px;
+    padding: 50px;
+}
+
+.A-cont h2, h5 {
+    margin: 0;
+}

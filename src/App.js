@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import prof from './img/img1.png'
+import Body from './body/body.js'
+import Nav from './component/nav.js'
 
 function App() {
   return (
     <div className="App">
-      <h3>my name: joshua sibanda</h3>
-      <img src={prof} alt="img" />
+      <Nav/>
+      <Body/>
     </div>
   );
 }
