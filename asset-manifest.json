@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/Joshua_Sibanda/static/css/main.82d12a7e.css",
-    "main.js": "/Joshua_Sibanda/static/js/main.76216ce4.js",
+    "main.js": "/Joshua_Sibanda/static/js/main.d63ed3c6.js",
     "static/js/787.f80089a7.chunk.js": "/Joshua_Sibanda/static/js/787.f80089a7.chunk.js",
+    "static/media/3d-render-abstract-particle-design.jpg": "/Joshua_Sibanda/static/media/3d-render-abstract-particle-design.f53724dc12e5756bb461.jpg",
     "index.html": "/Joshua_Sibanda/index.html",
     "main.82d12a7e.css.map": "/Joshua_Sibanda/static/css/main.82d12a7e.css.map",
-    "main.76216ce4.js.map": "/Joshua_Sibanda/static/js/main.76216ce4.js.map",
+    "main.d63ed3c6.js.map": "/Joshua_Sibanda/static/js/main.d63ed3c6.js.map",
     "787.f80089a7.chunk.js.map": "/Joshua_Sibanda/static/js/787.f80089a7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82d12a7e.css",
-    "static/js/main.76216ce4.js"
+    "static/js/main.d63ed3c6.js"
   ]
 }
