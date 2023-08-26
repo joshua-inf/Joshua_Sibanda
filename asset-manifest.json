@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/Joshua_Sibanda/static/css/main.82d12a7e.css",
-    "main.js": "/Joshua_Sibanda/static/js/main.d63ed3c6.js",
+    "main.css": "/Joshua_Sibanda/static/css/main.dd0c1763.css",
+    "main.js": "/Joshua_Sibanda/static/js/main.ba1c89c3.js",
     "static/js/787.f80089a7.chunk.js": "/Joshua_Sibanda/static/js/787.f80089a7.chunk.js",
     "static/media/3d-render-abstract-particle-design.jpg": "/Joshua_Sibanda/static/media/3d-render-abstract-particle-design.f53724dc12e5756bb461.jpg",
+    "static/media/Screenshot 2023-08-26 115611.png": "/Joshua_Sibanda/static/media/Screenshot 2023-08-26 115611.cffe97ea0c361c10203e.png",
+    "static/media/Screenshot 2023-08-25 010620.png": "/Joshua_Sibanda/static/media/Screenshot 2023-08-25 010620.4bece8621cb776b869fa.png",
+    "static/media/Screenshot 2023-08-26 140015.png": "/Joshua_Sibanda/static/media/Screenshot 2023-08-26 140015.7e7d4feee66e10813339.png",
+    "static/media/Screenshot 2023-08-26 140041.png": "/Joshua_Sibanda/static/media/Screenshot 2023-08-26 140041.1f0d1cff0658020e31f6.png",
     "index.html": "/Joshua_Sibanda/index.html",
-    "main.82d12a7e.css.map": "/Joshua_Sibanda/static/css/main.82d12a7e.css.map",
-    "main.d63ed3c6.js.map": "/Joshua_Sibanda/static/js/main.d63ed3c6.js.map",
+    "main.dd0c1763.css.map": "/Joshua_Sibanda/static/css/main.dd0c1763.css.map",
+    "main.ba1c89c3.js.map": "/Joshua_Sibanda/static/js/main.ba1c89c3.js.map",
     "787.f80089a7.chunk.js.map": "/Joshua_Sibanda/static/js/787.f80089a7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82d12a7e.css",
-    "static/js/main.d63ed3c6.js"
+    "static/css/main.dd0c1763.css",
+    "static/js/main.ba1c89c3.js"
   ]
 }
