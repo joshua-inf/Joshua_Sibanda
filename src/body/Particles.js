@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
@@ -13,11 +13,11 @@ const Particlesbg = () => {
         //await loadFull(engine);
         await loadFull(main)
     };
+useEffect(() => {
+    const container =  async ()  => {
+        await console.log(container);}
 
-    const particlesLoaded = useCallback(async container => {
-        await console.log(container);
-    }, []);
-
+}, [])
     return (
         <Particles
                

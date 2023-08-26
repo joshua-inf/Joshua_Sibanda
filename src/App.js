@@ -15,7 +15,7 @@ function App() {
     <div style={{zIndex:'2'}}>
         <Nav/>
         <Routes>
-          <Route path='/' element={<Body/>}/>
+          <Route path='/Joshua_Sibanda/' element={<Body/>}/>
         </Routes>
     </div>
     </BrowserRouter>

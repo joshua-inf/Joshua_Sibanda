@@ -3,7 +3,7 @@ const Nav = () => {
     return <div className="navlinks" style={{position:'sticky', top:'0', backgroundColor:'rgba(0,0,255,0.5)'}}>
     <div className='d-flex justify-content-between p-4' >
         <div>
-            <Link to='/'>
+            <Link to='/Joshua_Sibanda/'>
                 Home
             </Link>
         </div>
