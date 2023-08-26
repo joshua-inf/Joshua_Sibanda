@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Joshua_Sibanda/static/css/main.dd0c1763.css",
-    "main.js": "/Joshua_Sibanda/static/js/main.ba1c89c3.js",
+    "main.js": "/Joshua_Sibanda/static/js/main.731ffe6c.js",
     "static/js/787.f80089a7.chunk.js": "/Joshua_Sibanda/static/js/787.f80089a7.chunk.js",
     "static/media/3d-render-abstract-particle-design.jpg": "/Joshua_Sibanda/static/media/3d-render-abstract-particle-design.f53724dc12e5756bb461.jpg",
     "static/media/Screenshot 2023-08-26 115611.png": "/Joshua_Sibanda/static/media/Screenshot 2023-08-26 115611.cffe97ea0c361c10203e.png",
@@ -10,11 +10,11 @@
     "static/media/Screenshot 2023-08-26 140041.png": "/Joshua_Sibanda/static/media/Screenshot 2023-08-26 140041.1f0d1cff0658020e31f6.png",
     "index.html": "/Joshua_Sibanda/index.html",
     "main.dd0c1763.css.map": "/Joshua_Sibanda/static/css/main.dd0c1763.css.map",
-    "main.ba1c89c3.js.map": "/Joshua_Sibanda/static/js/main.ba1c89c3.js.map",
+    "main.731ffe6c.js.map": "/Joshua_Sibanda/static/js/main.731ffe6c.js.map",
     "787.f80089a7.chunk.js.map": "/Joshua_Sibanda/static/js/787.f80089a7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd0c1763.css",
-    "static/js/main.ba1c89c3.js"
+    "static/js/main.731ffe6c.js"
   ]
 }
