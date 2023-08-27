@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 const Nav = () => {
-    return <div className="navlinks" style={{position:'sticky', top:'0', backgroundColor:'rgba(0,0,255,0.5)'}}>
+    return <div className="navlinks" style={{position:'fixed', top:'0', width:'100%', backgroundColor:'#333'}}>
     <div className='d-flex justify-content-between p-4' >
         <div>
             <Link to='/Joshua_Sibanda/'>

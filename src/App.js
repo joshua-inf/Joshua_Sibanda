@@ -27,7 +27,7 @@ function App() {
             <Routes>
               <Route path='/Joshua_Sibanda/' element={
                 <Suspense fallback={<Loading />}>
-                  <Body />
+                  <Body/>
                 </Suspense>
               } />
             </Routes>

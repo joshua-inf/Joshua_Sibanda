@@ -1,7 +1,7 @@
 import image from '../img/Screenshot 2023-08-25 010620.png'
 import { BsFacebook } from 'react-icons/bs'
-import { BiLogoReact, BiLogoPython, BiLogoNodejs} from 'react-icons/bi'
-import {SiMysql, SiPhp} from 'react-icons/si'
+import { BiLogoReact, BiLogoPython, BiLogoNodejs } from 'react-icons/bi'
+import { SiMysql, SiPhp } from 'react-icons/si'
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { Projects } from '../component/products'
@@ -11,7 +11,7 @@ const Body = () => {
     const webprojects = Projects.filter((value) => value.category === 'Web').map((value) => {
         return (
             <>
-                <div className='col-6 col-md-4 p-2'>
+                <div className='col-12 col-md-4 p-2'>
                     <div className=' project-cont' style={{ height: '200px', position: 'relative', overflow: 'hidden' }}>
                         <div style={{ height: '100%' }}>
                             <div style={{ position: 'absolute', top: '0', bottom: '0', right: '0', left: '0' }}>
@@ -61,7 +61,7 @@ const Body = () => {
                     </div>
                 </div>
                 <div className='col-12 col-md-10'>
-                    <div className='text-start d-flex  flex-column justify-content-center' style={{ minHeight: '70vh' }}>
+                    <div className='text-start d-flex  flex-column justify-content-center' style={{ minHeight: '100vh' }}>
                         <div className='d-flex  flex-column justify-content-center'>
                             <div className='ms-4'>
                                 <div className='fs-1 fw-light'>Hi, I'm Joshua</div>
@@ -73,9 +73,14 @@ const Body = () => {
                     <div className='d-flex  flex-column justify-content-center' style={{ minHeight: '100vh ' }}>
                         <div>
                             <div className='row'>
+                                <h2 className='text-start'>About me</h2>
+                                <div className='col-12 col-md-6 p-2'>
+                                    <div className='' style={{ height: '400px', overflow:'hidden' }}>
+                                        <img src={image} width='100%' />
+                                    </div>
+                                </div>
                                 <div className='col-12 col-md-6'>
                                     <div className='text-start'>
-                                        <h4>About me</h4>
                                         <p>
                                             I am a young and intuitive youth with the passion make a difference in the softaware engineering space. <br />
                                             I started my coding journey in 2020 for fun after a graduated from highschool and it has now blossomed into something that I
@@ -87,7 +92,7 @@ const Body = () => {
                                         </p>
                                         <div>
                                             <h4>languages in my arsenal</h4>
-                                            <div className='d-flex' style={{gap:'20px'}}>
+                                            <div className='d-flex' style={{ gap: '20px' }}>
                                                 <div>
                                                     <BiLogoReact size={50} />
                                                     ReactJS
@@ -104,16 +109,11 @@ const Body = () => {
                                                     NodeJS
                                                 </div>
                                                 <div>
-                                                    <SiPhp size={50}/>
+                                                    <SiPhp size={50} />
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                    </div>
-                                </div>
-                                <div className='col-12 col-md-6 p-2'>
-                                    <div className='' style={{ height: '400px'}}>
-                                        <img src={image} height='100%' />
                                     </div>
                                 </div>
                             </div>
