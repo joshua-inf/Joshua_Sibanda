@@ -25,7 +25,7 @@ function App() {
           <div style={{ zIndex: '2' }}>
             <Nav />
             <Routes>
-              <Route path='/Joshua_Sibanda/' element={
+              <Route path='/' element={
                 <Suspense fallback={<Loading />}>
                   <Body/>
                 </Suspense>
