@@ -1,7 +1,11 @@
 import image from '../img/Screenshot 2023-08-25 010620.png'
+import image1 from '../img/react-mobile-image.png'
+import image2 from '../img/mypicture.png'
 import { BsFacebook } from 'react-icons/bs'
 import { BiLogoReact, BiLogoPython, BiLogoNodejs } from 'react-icons/bi'
 import { SiMysql, SiPhp } from 'react-icons/si'
+import { FaMedal } from "react-icons/fa";
+import { IoSchoolSharp } from "react-icons/io5";
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { Projects } from '../component/products'
@@ -63,56 +67,60 @@ const Body = () => {
                 <div className='col-12 col-md-10'>
                     <div className='text-start d-flex  flex-column justify-content-center' style={{ minHeight: '100vh' }}>
                         <div className='d-flex  flex-column justify-content-center'>
-                            <div className='ms-4'>
-                                <div className='fs-1 fw-light'>Hi, I'm Joshua</div>
-                                <div className='display-1 fw-bold'>Web Developer</div>
-                                <button className='btn btn-lg btn-outline-info rounded-0'>Contact me</button>
+                            <div className='row'>
+                                <div className='col-md-4 col-12 d-flex justify-content-center'>
+                                    <div className='p-1 bg-light d-flex' style={{borderRadius:'100%'}}>
+                                    <img src={image2} width='300px' />
+                                    </div>
+                                </div>
+                                <div className='col-md-8 col-12'>
+                                    <div className=' text-center'>
+                                        <div className='fs-1 fw-light'>Hi, I'm Joshua</div>
+                                        <div className='display-1 fw-bold'>Fullstack Developer</div>
+                                        <div className='d-flex justify-content-center' style={{gap:10}}>
+                                            <button className='btn btn-lg btn-outline-light rounded-5'>Download CV</button>
+                                            <button className='btn btn-lg btn-light rounded-5'>Contact me</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className='d-flex  flex-column justify-content-center' style={{ minHeight: '100vh ' }}>
                         <div>
                             <div className='row'>
-                                <h2 className='text-start'>About me</h2>
+                                <h2 className='text-start text-secondary h5 text-center'>Get to know more</h2>
+                                <h2 className='text-start text-center'>About me</h2>
                                 <div className='col-12 col-md-6 p-2'>
-                                    <div className='' style={{ height: '400px', overflow:'hidden' }}>
-                                        <img src={image} width='100%' />
+                                    <div className='' style={{}}>
+                                        <img src={image} width='300px' />
                                     </div>
                                 </div>
                                 <div className='col-12 col-md-6'>
-                                    <div className='text-start'>
-                                        <p>
-                                            I am a young and intuitive youth with the passion make a difference in the softaware engineering space. <br />
-                                            I started my coding journey in 2020 for fun after a graduated from highschool and it has now blossomed into something that I
-                                            can confidently and strongly say that it is now apart of my life now
-                                        </p>
-                                        <p>
-                                            I have honed and developed skills that help me do things that can make a difference while at the same time enjoying my self.
-                                            I love code and code for me is more than just a hobby.
-                                        </p>
-                                        <div>
-                                            <h4>languages in my arsenal</h4>
-                                            <div className='d-flex' style={{ gap: '20px' }}>
-                                                <div>
-                                                    <BiLogoReact size={50} />
-                                                    ReactJS
-                                                </div>
-                                                <div>
-                                                    <SiMysql size={50} />
-                                                </div>
-                                                <div>
-                                                    <BiLogoPython size={50} />
-                                                    Python
-                                                </div>
-                                                <div>
-                                                    <BiLogoNodejs size={50} />
-                                                    NodeJS
-                                                </div>
-                                                <div>
-                                                    <SiPhp size={50} />
-                                                </div>
+                                    <div className='text-start h-100' style={{alignContent:"center"}}>
+                                        <div className='d-flex justify-content-center mb-4' style={{gap:10, flexWrap:'wrap'}}>
+                                            <div className='btn btn-outline-light p-4 rounded-4 '>
+                                                <FaMedal size={30} />
+                                                <div className='fs-5'>Experience</div>
+                                                <div className='opacity-'>2+ years</div>
+                                                <div>Fullstack Developer</div>
                                             </div>
-
+                                            <div className='btn btn-outline-light p-2 rounded-4 '>
+                                                <IoSchoolSharp size={30} />
+                                                <div className='fs-5'>Education</div>
+                                                <div className=''>Highschool Certificate</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                I am a young and intuitive youth with the passion make a difference in the softaware engineering space. <br />
+                                                I started my coding journey in 2020 for fun after a graduated from highschool and it has now blossomed into something that I
+                                                can confidently and strongly say that it is now apart of my life now
+                                            </p>
+                                            <p>
+                                                I have honed and developed skills that help me do things that can make a difference while at the same time enjoying my self.
+                                                I love code and code for me is more than just a hobby.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -122,15 +130,44 @@ const Body = () => {
                     <div className='mt-5 pt-5'>
                         <div>
                             <div>
-                                <div className='text-start h3'>Project Highlights</div>
-                                <hr />
+                                <div className='text-start h3'>My Skills</div>
+                                <hr/>
                             </div>
-                            <div className='row'>
-                                {webprojects}
+                           
+                           <div style={{minHeight:'70vh', alignContent:'center'}} className=''>
+                            <div className=' rounded-3 pt-4 px-3'>
+                                <div className='row'>
+                                    <div className='col-md-4 col-12'>
+                                        <img src={image1} width='300px' />
+                                    </div>
+                                        <div className='col-md-8 col-12 text-start'>
+                                            <div className='d-flex py-3 flex-column  h-100 justify-content-center' style={{gap:10}}>
+                                             <h3 className='text-start h2'>Mobile App Developement</h3>
+                                                <div>
+                                                I specialize in building high-performance, cross-platform mobile apps using React Native. With this framework, I create seamless experiences for both iOS and Android by writing code once and deploying it everywhere. My skills include:
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        Cross-Platform Development: Efficiently crafting apps for both iOS and Android.
+                                                    </li>
+                                                    <li>
+                                                        Performance Optimization: Enhancing app speed and responsiveness.
+                                                    </li>
+                                                    <li>
+                                                        Custom UI/UX: Designing intuitive, user-friendly interfaces.
+                                                    </li>
+                                                    <li>
+                                                        API Integration: Connecting apps with external services and data.
+                                                    </li>
+                                                </ul>
+                                                <div>
+                                                My approach combines clean coding practices with a focus on delivering exceptional user experiences.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className='text-end h6'>
-                            view more
                         </div>
                     </div>
                 </div>
