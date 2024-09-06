@@ -113,13 +113,13 @@ const Body = () => {
                                         </div>
                                         <div>
                                             <p>
-                                                I am a young and intuitive youth with the passion make a difference in the softaware engineering space. <br />
-                                                I started my coding journey in 2020 for fun after a graduated from highschool and it has now blossomed into something that I
-                                                can confidently and strongly say that it is now apart of my life now
+                                            I am a young and intuitive individual with a passion for making a difference in the software engineering field. 
+                                            I began my coding journey in 2020 for fun after graduating from high school,
+                                             and it has since blossomed into something that I can confidently say is now a significant part of my life.
                                             </p>
                                             <p>
-                                                I have honed and developed skills that help me do things that can make a difference while at the same time enjoying my self.
-                                                I love code and code for me is more than just a hobby.
+                                            I have honed and developed skills that enable me to make a meaningful impact while enjoying myself.
+                                             I love coding; for me, it's more than just a hobby.
                                             </p>
                                         </div>
                                     </div>
