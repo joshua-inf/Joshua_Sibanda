@@ -1,6 +1,5 @@
 import './App.css';
 import Body from './body/body.js'
-import image from './img/3d-render-abstract-particle-design.jpg'
 
 import Nav from './component/nav.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

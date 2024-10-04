@@ -1,5 +1,4 @@
 import image from '../img/Screenshot 2023-08-25 010620.png'
-import image1 from '../img/react-mobile-image.png'
 import image2 from '../img/mypicture.png'
 import { BsFacebook } from 'react-icons/bs'
 import { BiLogoReact, BiLogoPython, BiLogoNodejs } from 'react-icons/bi'
@@ -9,6 +8,7 @@ import { IoSchoolSharp } from "react-icons/io5";
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { Projects } from '../component/products'
+import { MobileSkills, WebSkills } from './mainbodycomp/Skills'
 
 const Body = () => {
 
@@ -135,38 +135,10 @@ const Body = () => {
                             </div>
                            
                            <div style={{minHeight:'70vh', alignContent:'center'}} className=''>
-                            <div className=' rounded-3 pt-4 px-3'>
-                                <div className='row'>
-                                    <div className='col-md-4 col-12'>
-                                        <img src={image1} width='300px' />
-                                    </div>
-                                        <div className='col-md-8 col-12 text-start'>
-                                            <div className='d-flex py-3 flex-column  h-100 justify-content-center' style={{gap:10}}>
-                                             <h3 className='text-start h2'>Mobile App Developement</h3>
-                                                <div>
-                                                I specialize in building high-performance, cross-platform mobile apps using React Native. With this framework, I create seamless experiences for both iOS and Android by writing code once and deploying it everywhere. My skills include:
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        Cross-Platform Development: Efficiently crafting apps for both iOS and Android.
-                                                    </li>
-                                                    <li>
-                                                        Performance Optimization: Enhancing app speed and responsiveness.
-                                                    </li>
-                                                    <li>
-                                                        Custom UI/UX: Designing intuitive, user-friendly interfaces.
-                                                    </li>
-                                                    <li>
-                                                        API Integration: Connecting apps with external services and data.
-                                                    </li>
-                                                </ul>
-                                                <div>
-                                                My approach combines clean coding practices with a focus on delivering exceptional user experiences.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <MobileSkills/>
+                            </div>
+                            <div style={{minHeight:'70vh', alignContent:'center'}} className=''>
+                                <WebSkills/>
                             </div>
                         </div>
                     </div>
