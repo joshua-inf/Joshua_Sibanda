@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['Pacifico', 'cursive'],  // for hero headings
+        body: ['Poppins', 'sans-serif'],   // for regular text
+      },
       colors: {
         primary: {
           50: '#eff6ff',
