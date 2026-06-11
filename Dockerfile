@@ -3,12 +3,17 @@ FROM node:22-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install pnpm globally inside the container
 RUN npm i -g pnpm
+
 
 # Copy lockfile and package config
 COPY package.json pnpm-lock.yaml* .npmrc* ./
-RUN pnpm i --frozen-lockfile --config.only-built-dependencies=none
+
+# Force pnpm to allow all built dependencies in this CI context
+RUN echo "only-built-dependencies=" >> .npmrc
+
+# Now run the standard clean install
+RUN pnpm i --frozen-lockfile
 
 # --- STAGE 2: Builder ---
 FROM node:22-alpine AS builder
