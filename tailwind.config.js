@@ -1,14 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Pacifico', 'cursive'],  // for hero headings
-        body: ['Poppins', 'sans-serif'],   // for regular text
+        heading: ['var(--font-pacifico)', 'cursive'],  // for hero headings
+        body: ['var(--font-poppins)', 'sans-serif'],   // for regular text
       },
       colors: {
         primary: {

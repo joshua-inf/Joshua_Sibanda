@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { BLOG_POSTS } from "../data/blogPosts";
 
 const BlogSection: React.FC = () => {
@@ -13,12 +14,12 @@ const BlogSection: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-2">Latest Articles</h2>
             <p className="text-slate-400">Thoughts, guides, and insights on software development.</p>
           </div>
-          <a
-            href="#/blog"
+          <Link
+            href="/blog"
             className="mt-4 md:mt-0 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-lg border border-slate-700 hover:border-blue-500 transition-all font-medium text-sm text-center"
           >
             View All Posts
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -30,7 +31,7 @@ const BlogSection: React.FC = () => {
               {post.image && (
                 <div className="h-48 overflow-hidden border-b border-slate-700 select-none">
                   <img
-                    src={post.image}
+                    src={post.image?.src || post.image}
                     alt={post.title}
                     className="w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-500"
                   />
@@ -47,7 +48,7 @@ const BlogSection: React.FC = () => {
 
                 {/* Title and Excerpt */}
                 <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 hover:text-blue-400 transition-colors">
-                  <a href={`#/blog/${post.slug}`}>{post.title}</a>
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h3>
                 <p className="text-slate-400 text-sm mb-6 leading-relaxed flex-grow line-clamp-3">
                   {post.excerpt}
@@ -63,13 +64,13 @@ const BlogSection: React.FC = () => {
                     />
                     <span className="text-xs font-medium text-slate-300">{post.author.name}</span>
                   </div>
-                  <a
-                    href={`#/blog/${post.slug}`}
+                  <Link
+                    href={`/blog/${post.slug}`}
                     className="text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 group"
                   >
                     Read Post 
                     <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState, useMemo } from "react";
+import Link from "next/link";
 import { BLOG_POSTS } from "../data/blogPosts";
 
 const BlogList: React.FC = () => {
@@ -29,13 +32,13 @@ const BlogList: React.FC = () => {
         {/* Navigation / Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-12">
           <div>
-            <a
-              href="#home"
+            <Link
+              href="/#home"
               className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors mb-3 group"
             >
               <span className="transform group-hover:-translate-x-1 transition-transform mr-1.5">←</span>
               Back to Home
-            </a>
+            </Link>
             <h1 className="text-4xl md:text-5xl font-bold text-white">Articles & Insights</h1>
           </div>
         </div>
@@ -85,7 +88,7 @@ const BlogList: React.FC = () => {
                 {post.image && (
                   <div className="h-48 overflow-hidden border-b border-slate-700 select-none">
                     <img
-                      src={post.image}
+                      src={post.image?.src || post.image}
                       alt={post.title}
                       className="w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-500"
                     />
@@ -100,7 +103,7 @@ const BlogList: React.FC = () => {
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 hover:text-blue-400 transition-colors">
-                    <a href={`#/blog/${post.slug}`}>{post.title}</a>
+                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
                   <p className="text-slate-400 text-sm mb-6 leading-relaxed flex-grow line-clamp-3">
                     {post.excerpt}
@@ -115,13 +118,13 @@ const BlogList: React.FC = () => {
                       />
                       <span className="text-xs font-medium text-slate-300">{post.author.name}</span>
                     </div>
-                    <a
-                      href={`#/blog/${post.slug}`}
+                    <Link
+                      href={`/blog/${post.slug}`}
                       className="text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 group"
                     >
                       Read Post 
                       <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

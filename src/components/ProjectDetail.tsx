@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { PROJECTS } from "../data/projectsData";
 
 interface ProjectDetailProps {
@@ -13,12 +14,12 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
       <div className="min-h-screen pt-28 pb-20 bg-slate-900 text-slate-100 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white mb-4">Project Not Found</h2>
-          <a
-            href="#/projects"
+          <Link
+            href="/projects"
             className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all"
           >
             Back to Project Catalog
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -28,13 +29,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
     <div className="min-h-screen pt-28 pb-20 bg-slate-900 text-slate-100">
       <div className="container max-w-4xl mx-auto">
         {/* Navigation */}
-        <a
-          href="#/projects"
+        <Link
+          href="/projects"
           className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors mb-8 group"
         >
           <span className="transform group-hover:-translate-x-1 transition-transform mr-1.5">←</span>
           Back to Projects Catalog
-        </a>
+        </Link>
 
         {/* Header Section */}
         <header className="mb-10 pb-8 border-b border-slate-800">
@@ -88,7 +89,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
         {project.image && (
           <div className="mb-10 rounded-lg overflow-hidden border border-slate-850 select-none">
             <img
-              src={project.image}
+              src={project.image?.src || project.image}
               alt={project.title}
               className="w-full h-auto object-cover object-top max-h-[450px]"
             />

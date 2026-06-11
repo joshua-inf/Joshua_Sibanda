@@ -11,7 +11,7 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
-  image?: string;
+  image?: any;
   longDescription?: string;
   features?: string[];
   screenshots?: string[];

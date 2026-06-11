@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { PROJECTS } from "../data/projectsData";
 import { Globe, Database, Smartphone, Monitor } from "lucide-react";
 
@@ -39,12 +40,12 @@ const Projects: React.FC = () => {
                 <h2 className="text-4xl font-bold text-white mb-2">Featured Projects</h2>
                 <p className="text-slate-400">Some of my recent applications and system designs.</p>
               </div>
-              <a
-                href="#/projects"
+              <Link
+                href="/projects"
                 className="mt-4 md:mt-0 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-lg border border-slate-700 hover:border-blue-500 transition-all font-medium text-sm text-center"
               >
                 View Project Directory
-              </a>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -56,21 +57,21 @@ const Projects: React.FC = () => {
                   {project.image && (
                     <div className="h-48 overflow-hidden border-b border-slate-700 select-none">
                       <img
-                        src={project.image}
+                        src={project.image?.src || project.image}
                         alt={project.title}
                         className="w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-500"
                       />
                     </div>
                   )}
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex items-center justify-between mb-4">
+                     <div className="flex items-center justify-between mb-4">
                       <span className="px-2.5 py-0.5 bg-blue-500/10 text-blue-400 rounded-md text-xs font-semibold uppercase tracking-wider">
                         {project.category.replace("-", " ")}
                       </span>
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
-                      <a href={`#/projects/${project.slug}`}>{project.title}</a>
+                      <Link href={`/projects/${project.slug}`}>{project.title}</Link>
                     </h3>
                     <p className="text-slate-400 text-sm mb-6 leading-relaxed flex-grow line-clamp-3">
                       {project.description}
@@ -88,13 +89,13 @@ const Projects: React.FC = () => {
                     </div>
 
                     <div className="flex gap-4 pt-4 border-t border-slate-700/50 mt-auto">
-                      <a
-                        href={`#/projects/${project.slug}`}
+                      <Link
+                        href={`/projects/${project.slug}`}
                         className="text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 group"
                       >
                         Explore Project 
                         <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -132,12 +133,12 @@ const Projects: React.FC = () => {
               <p className="text-sm text-slate-500 mb-6">
                 My portfolio projects database is currently being populated. You can browse the dedicated catalog page or check back soon for live links and case studies.
               </p>
-              <a
-                href="#/projects"
+              <Link
+                href="/projects"
                 className="inline-flex px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all font-medium text-sm text-center"
               >
                 Browse Projects Catalog
-              </a>
+              </Link>
             </div>
           </div>
         )}

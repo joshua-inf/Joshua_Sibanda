@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion, easeOut } from "framer-motion";
 import heroPhoto from "../../assets/PHOTO-2026-02-04-22-48-57 2.jpg";
@@ -187,7 +189,7 @@ const Hero: React.FC = () => {
               variants={itemVariants}
             >
               <motion.img
-                src={heroPhoto}
+                src={heroPhoto.src}
                 alt="Joshua Sibanda - Software Developer"
                 className="w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[400px] object-cover object-top drop-shadow-2xl rounded-lg border border-slate-700/50 relative z-10"
                 variants={floatingImageVariants}

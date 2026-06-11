@@ -15,7 +15,7 @@ export interface BlogPost {
   publishedAt: string;
   readTime: string;
   category: string;
-  image?: string;
+  image?: any;
   author: {
     name: string;
     avatar: string;
@@ -47,23 +47,23 @@ In early 2025, a critical failure occurred at the tailings storage facility oper
 
 ASTA was contracted to gather independent information, run water quality analytics, assess the soil impact, and report on the overall environmental degradation.
 
-[image: ${damPhoto3}]
+[image: ${damPhoto3.src}]
 
 ### My Role: Sampling and Analytics
 As a junior analyst, my work involved hands-on field sampling. We walked along the affected streams collecting water and sediment samples. I was tasked with tracking the data points, organizing coordinate logs, and supporting the team during the chemical analysis of heavy metal concentration. 
 
 Working in the field required high precision. Unlike code, where you can easily undo an action or run a debugger, a contaminated sample means losing a day of fieldwork. 
 
-[image: ${damPhoto5}]
+[image: ${damPhoto5.src}]
 
 ### Holding Stakeholder Briefs
 One of the most rewarding aspects of the project was participating in stakeholder briefings with the general public and local community members. The spillage directly impacted people's livestock, farming land, and drinking water. 
 
 In these meetings, we presented our independent scientific findings and gathered testimonies from the locals. Hearing how the spillage altered their daily lives brought a human perspective to environmental science. It taught me the importance of clear, non-technical communication when presenting complex scientific data to stakeholders.
 
-[image: ${damPhoto1}]
+[image: ${damPhoto1.src}]
 
-[image: ${damPhoto2}]
+[image: ${damPhoto2.src}]
 
 ### Takeaways: The Value of Stepping Out of Your Area
 This project reminded me that problem-solving isn't exclusive to writing code. The analytical thinking, attention to detail, and database logic I use in software development translated directly to tracking toxicological samples and compiling environmental reports. 

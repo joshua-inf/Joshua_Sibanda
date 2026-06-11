@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState, useMemo } from "react";
+import Link from "next/link";
 import { PROJECTS } from "../data/projectsData";
 
 const ProjectList: React.FC = () => {
@@ -31,13 +34,13 @@ const ProjectList: React.FC = () => {
         {/* Navigation / Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-12">
           <div>
-            <a
-              href="#home"
+            <Link
+              href="/#home"
               className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors mb-3 group"
             >
               <span className="transform group-hover:-translate-x-1 transition-transform mr-1.5">←</span>
               Back to Home
-            </a>
+            </Link>
             <h1 className="text-4xl md:text-5xl font-bold text-white">Project Catalog</h1>
             <p className="text-slate-400 mt-2">A comprehensive directory of my engineered solutions.</p>
           </div>
@@ -88,7 +91,7 @@ const ProjectList: React.FC = () => {
                 {project.image && (
                   <div className="h-48 overflow-hidden border-b border-slate-700 select-none">
                     <img
-                      src={project.image}
+                      src={project.image?.src || project.image}
                       alt={project.title}
                       className="w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-500"
                     />
@@ -102,7 +105,7 @@ const ProjectList: React.FC = () => {
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
-                    <a href={`#/projects/${project.slug}`}>{project.title}</a>
+                    <Link href={`/projects/${project.slug}`}>{project.title}</Link>
                   </h3>
                   <p className="text-slate-400 text-sm mb-6 leading-relaxed flex-grow line-clamp-3">
                     {project.description}
@@ -120,13 +123,13 @@ const ProjectList: React.FC = () => {
                   </div>
 
                   <div className="flex gap-4 pt-4 border-t border-slate-700/50 mt-auto">
-                    <a
-                      href={`#/projects/${project.slug}`}
+                    <Link
+                      href={`/projects/${project.slug}`}
                       className="text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 group"
                     >
                       Explore Project Detail 
                       <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
