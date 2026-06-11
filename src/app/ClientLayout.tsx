@@ -14,7 +14,7 @@ export default function ClientLayout({
     // Check if the site was already loaded in this session
     const hasLoaded = sessionStorage.getItem("site-loaded");
     if (hasLoaded) {
-      setLoading(false);
+      setTimeout(() => setLoading(false), 0);
     } else {
       const timer = setTimeout(() => {
         setLoading(false);
