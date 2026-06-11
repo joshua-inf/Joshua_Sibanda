@@ -8,8 +8,6 @@ RUN npm i -g pnpm
 # Copy lockfile and package config
 COPY package.json pnpm-lock.yaml* .npmrc* ./
 
-# Native CLI flag bypasses strict lifecycle scripts crashing the build
-RUN pnpm i --frozen-lockfile --only-built-dependencies=none
 
 # --- STAGE 2: Builder ---
 FROM node:22-alpine AS builder
