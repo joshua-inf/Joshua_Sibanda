@@ -5,7 +5,7 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev",
-    "build": "next build"
+    "build": "node -e \"const os = require('os'); const cp = require('child_process'); if (os.platform() === 'win32') { try { cp.execSync('if exist .next rmdir /s /q .next', { shell: true }); } catch(e) {} } else { try { cp.execSync('rm -rf .next', { shell: true }); } catch(e) {} }\" && next build"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
@@ -31,11 +31,5 @@
     "tailwindcss": "^3.3.6",
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.61.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "lint",
-      "unrs-resolver"
-    ]
   }
 }
