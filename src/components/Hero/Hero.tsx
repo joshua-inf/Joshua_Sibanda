@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, easeOut } from "framer-motion";
+import heroPhoto from "../../assets/PHOTO-2026-02-04-22-48-57 2.jpg";
 import {
   Code2,
   Database,
@@ -93,7 +94,7 @@ const containerVariants = {
   },
 };
 
-export const itemVariants = {
+const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -181,14 +182,14 @@ const Hero: React.FC = () => {
 
           <HeroTextContent />
           {/* Image Section */}
-          <div className="flex-1 order-1 lg:order-2 flex justify-center relative">
+          <div className="flex-1 order-1 lg:order-2 flex justify-center relative select-none">
             <motion.div
               variants={itemVariants}
             >
               <motion.img
-                src="/images/joshuaIcon.png"
+                src={heroPhoto}
                 alt="Joshua Sibanda - Software Developer"
-                className="w-100 h-100 object-contain drop-shadow-2xl rounded-2xl relative z-10"
+                className="w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[400px] object-cover object-top drop-shadow-2xl rounded-lg border border-slate-700/50 relative z-10"
                 variants={floatingImageVariants}
                 animate="floating"
               />

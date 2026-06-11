@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
-          <form onSubmit={handleSubmit} className="space-y-6 bg-slate-800 p-8 rounded-xl border border-slate-700">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-slate-800 p-8 rounded-lg border border-slate-700">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
                 Name

@@ -49,13 +49,13 @@ const Skills: React.FC = () => {
         <h2 className="section-title">Skills & Technologies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {Object.entries(categories).map(([key, title]) => (
-            <div key={key} className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-colors duration-300">
+            <div key={key} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-colors duration-300">
               <h3 className="text-xl font-semibold text-blue-400 mb-4">{title}</h3>
               <div className="flex flex-wrap gap-2">
                 {getSkillsByCategory(key as Skill['category']).map((skill, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium border border-blue-500/20"
+                    className="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-md text-sm font-medium border border-blue-500/20"
                   >
                     {skill.name}
                   </span>
