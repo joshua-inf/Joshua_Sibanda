@@ -5,8 +5,8 @@ WORKDIR /app
 
 RUN npm i -g pnpm
 
-# Copy lockfile and package config
-COPY package.json pnpm-lock.yaml* .npmrc* ./
+# Copy whole root
+COPY . .
 
 RUN pnpm i --frozen-lockfile
 
