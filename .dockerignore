@@ -1,8 +1,0 @@
-node_modules
-.next
-.vite
-out
-build
-.git
-.pnpm-store
-*.log

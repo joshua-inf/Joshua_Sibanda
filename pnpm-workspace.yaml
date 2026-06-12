@@ -1,4 +1,0 @@
-allowBuilds:
-  esbuild: true
-  lint: true
-  unrs-resolver: set this to true or false
