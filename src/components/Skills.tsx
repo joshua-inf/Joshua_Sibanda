@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 type Skill = {
   name: string;
@@ -47,7 +48,7 @@ const Skills: React.FC = () => {
     <section id="skills" className="py-20 bg-slate-800/50">
       <div className="container">
         <h2 className="section-title">Skills & Technologies</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {Object.entries(categories).map(([key, title]) => (
             <div key={key} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition-colors duration-300">
               <h3 className="text-xl font-semibold text-blue-400 mb-4">{title}</h3>
@@ -63,6 +64,16 @@ const Skills: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Link
+            href="/skills"
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors inline-flex items-center gap-2 group"
+          >
+            Explore Detailed Skills Narrative
+            <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
         </div>
       </div>
     </section>
