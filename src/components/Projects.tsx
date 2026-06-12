@@ -31,18 +31,18 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50 transition-colors duration-300">
       <div className="container">
         {featuredProjects.length > 0 ? (
           <>
             <div className="flex flex-col md:flex-row justify-between items-center mb-12">
               <div>
-                <h2 className="text-4xl font-bold text-white mb-2">Featured Projects</h2>
-                <p className="text-slate-400">Some of my recent applications and system designs.</p>
+                <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-2 transition-colors">Featured Projects</h2>
+                <p className="text-slate-600 dark:text-slate-400 transition-colors">Some of my recent applications and system designs.</p>
               </div>
               <Link
                 href="/projects"
-                className="mt-4 md:mt-0 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-lg border border-slate-700 hover:border-blue-500 transition-all font-medium text-sm text-center"
+                className="mt-4 md:mt-0 px-5 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white rounded-lg border border-slate-250 dark:border-slate-700 hover:border-blue-500 transition-all font-medium text-sm text-center"
               >
                 View Project Directory
               </Link>
@@ -52,10 +52,10 @@ const Projects: React.FC = () => {
               {featuredProjects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-[1.02] flex flex-col h-full group"
+                  className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-[1.02] flex flex-col h-full group"
                 >
                   {project.image && (
-                    <div className="h-48 overflow-hidden border-b border-slate-700 select-none">
+                    <div className="h-48 overflow-hidden border-b border-slate-200 dark:border-slate-700 select-none">
                       <img
                         src={project.image?.src || project.image}
                         alt={project.title}
@@ -65,15 +65,15 @@ const Projects: React.FC = () => {
                   )}
                   <div className="p-6 flex flex-col flex-grow">
                      <div className="flex items-center justify-between mb-4">
-                      <span className="px-2.5 py-0.5 bg-blue-500/10 text-blue-400 rounded-md text-xs font-semibold uppercase tracking-wider">
+                      <span className="px-2.5 py-0.5 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-md text-xs font-semibold uppercase tracking-wider border border-blue-100 dark:border-blue-500/20">
                         {project.category.replace("-", " ")}
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                       <Link href={`/projects/${project.slug}`}>{project.title}</Link>
                     </h3>
-                    <p className="text-slate-400 text-sm mb-6 leading-relaxed flex-grow line-clamp-3">
+                    <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-grow line-clamp-3">
                       {project.description}
                     </p>
 
@@ -81,17 +81,17 @@ const Projects: React.FC = () => {
                       {project.technologies.slice(0, 4).map((tech, index) => (
                         <span
                           key={index}
-                          className="px-2.5 py-1 bg-slate-700/60 text-slate-300 rounded-md text-xs font-medium border border-slate-700"
+                          className="px-2.5 py-1 bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-700"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
 
-                    <div className="flex gap-4 pt-4 border-t border-slate-700/50 mt-auto">
+                    <div className="flex gap-4 pt-4 border-t border-slate-200 dark:border-slate-700/50 mt-auto">
                       <Link
                         href={`/projects/${project.slug}`}
-                        className="text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 group"
+                        className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors inline-flex items-center gap-1 group"
                       >
                         Explore Project 
                         <span className="transform group-hover:translate-x-1 transition-transform">→</span>
@@ -105,8 +105,8 @@ const Projects: React.FC = () => {
         ) : (
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Featured Work</h2>
-              <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Featured Work</h2>
+              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 I engineer software across multiple platforms. Here are the core areas of my development expertise.
               </p>
             </div>
@@ -115,22 +115,22 @@ const Projects: React.FC = () => {
               {capabilities.map(({ Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="bg-slate-800/80 p-6 rounded-lg border border-slate-700/60 flex gap-4 hover:border-blue-500 transition-colors duration-300"
+                  className="bg-white dark:bg-slate-800/80 p-6 rounded-lg border border-slate-200 dark:border-slate-700/60 flex gap-4 hover:border-blue-500 transition-colors duration-300"
                 >
-                  <div className="p-3 bg-blue-500/10 rounded-lg text-blue-400 h-fit border border-blue-500/20">
+                  <div className="p-3 bg-blue-550/5 dark:bg-blue-500/10 rounded-lg text-blue-600 dark:text-blue-400 h-fit border border-blue-100 dark:border-blue-500/20">
                     <Icon size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="text-center bg-slate-800/20 p-8 rounded-lg border border-slate-800 max-w-2xl mx-auto">
-              <h3 className="text-lg font-bold text-slate-300 mb-2">Projects Directory Under Construction</h3>
-              <p className="text-sm text-slate-500 mb-6">
+            <div className="text-center bg-slate-100/50 dark:bg-slate-800/20 p-8 rounded-lg border border-slate-200 dark:border-slate-850 max-w-2xl mx-auto">
+              <h3 className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-2">Projects Directory Under Construction</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-500 mb-6">
                 My portfolio projects database is currently being populated. You can browse the dedicated catalog page or check back soon for live links and case studies.
               </p>
               <Link

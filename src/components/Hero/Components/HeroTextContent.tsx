@@ -36,20 +36,20 @@ export const HeroTextContent = () => {
                     variants={itemVariants}
                 >
                     Hi, I'm{" "}
-                    <span className="text-blue-400 font-semibold">
+                    <span className="text-blue-600 dark:text-blue-400 font-semibold transition-colors">
                         Joshua Sibanda
                     </span>
                 </motion.h1>
 
                 <motion.h2
-                    className="text-xl md:text-2xl text-slate-300 mb-8 font-semibold"
+                    className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 font-semibold transition-colors"
                     variants={itemVariants}
                 >
                     <Typewriter />
                 </motion.h2>
 
                 <motion.p
-                    className="text-lg text-slate-400 mb-8 max-w-2xl leading-relaxed"
+                    className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed transition-colors"
                     variants={itemVariants}
                 >
                     Passionate software developer based in Zambia, specializing in
@@ -66,10 +66,10 @@ export const HeroTextContent = () => {
                                 key={href}
                                 href={href}
                                 className={`
-                      px-6 py-3 rounded-lg transition font-medium relative z-10
+                      px-6 py-3 rounded-lg transition font-medium relative z-10 transition-all duration-300
                       ${variant === "primary"
                                     ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-blue-600/25"
-                                    : "border border-blue-500 text-blue-400 hover:bg-blue-500/10 hover:text-blue-300"
+                                    : "border border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-500/10 hover:text-blue-700 dark:hover:text-blue-300"
                                 }
                     `}
                             >
@@ -138,13 +138,13 @@ const Typewriter: React.FC = () => {
 
     return (
         <motion.h2
-            className="text-xl md:text-2xl text-slate-300 mb-8 font-semibold"
+            className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 font-semibold transition-colors"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
             {text}
-            <span className="border-r-2 border-slate-300 ml-1 animate-pulse"></span>
+            <span className="border-r-2 border-slate-400 dark:border-slate-300 ml-1 animate-pulse"></span>
         </motion.h2>
     );
 };

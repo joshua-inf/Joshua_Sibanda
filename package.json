@@ -5,6 +5,7 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev",
+    "lint": "eslint .",
     "build": "node -e \"const os = require('os'); const cp = require('child_process'); if (os.platform() === 'win32') { try { cp.execSync('if exist .next rmdir /s /q .next', { shell: true }); } catch(e) {} } else { try { cp.execSync('rm -rf .next', { shell: true }); } catch(e) {} }\" && next build"
   },
   "dependencies": {

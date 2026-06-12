@@ -6,6 +6,8 @@ import edurootImg from "../assets/eduroot.png";
 import namarTechImg from "../assets/namar_tech.png";
 import techrootsWebImg from "../assets/techroots_web.png";
 import transworldImg from "../assets/transworld.png";
+import fivesphereImg from "../assets/fivesphere.png";
+import winterImg from "../assets/winter.png";
 
 export interface Project {
   id: string;
@@ -20,6 +22,7 @@ export interface Project {
   longDescription?: string;
   features?: string[];
   screenshots?: string[];
+  requestDemo?: boolean;
 }
 
 export const PROJECTS: Project[] = [
@@ -189,6 +192,49 @@ Patient email routing and newsletter sign-ups are integrated via Mailtrap API, a
       "Smooth UI entrance effects using Animate.css modules.",
       "Tailwind CSS v4 configuration for clean styling and high-performance compilation.",
       "Comprehensive multi-page routing handled with React Router DOM."
+    ]
+  },
+  {
+    id: "9",
+    title: "Fivesphere Multi Trade Website",
+    slug: "fivesphere-multi-trade-website",
+    description: "A premium corporate website for Fivesphere Multi Trade Limited, driving digital engagement across agriculture, construction, mining, real estate, and industrial supply sectors.",
+    longDescription: `Fivesphere is a high-end corporate website developed for Fivesphere Multi Trade Limited. The application is built using Next.js 16 and React 19, employing Framer Motion for smooth parallax transitions, staggered animations, and fluid entrance triggers.
+
+The design maps out five strategic pillars of excellence: Agriculture, Construction, Industrial Supply, Mining, and Real Estate.
+
+It features a modern dark-themed hero section, custom grid layout, responsive typography, and strategic call-to-action systems to facilitate partnership proposals and brochure requests.`,
+    category: "website",
+    technologies: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    image: fivesphereImg,
+    features: [
+      "Modern Next.js 16 and React 19 framework integrations for server-optimized loading.",
+      "Staggered grid layout configurations built to present the five core industrial sectors cleanly.",
+      "Fluid user animations and hover transitions built with Framer Motion.",
+      "Responsive corporate themes supporting high-contrast styling and dark interfaces.",
+      "Custom call-to-action portals for brochure downloads and direct partnership inquiries."
+    ]
+  },
+  {
+    id: "10",
+    title: "Apparel Management System",
+    slug: "apparel-management-system",
+    description: "An internal, secure enterprise clothing management and order tracking platform designed for garment manufacturers to track inventory, production jobs, and logistics.",
+    longDescription: `The Apparel Management System is a bespoke internal enterprise resource planning (ERP) platform developed for garment manufacturing and supply chain management.
+
+Built with Next.js 16 and React 19, the system operates on a secure custom JWT-based authentication model (utilizing bcrypt and session-token verification) paired with a high-performance MySQL database.
+
+The application allows operators to track custom production jobs, log inventory supply metrics, and manage user activity profiles under a unified administrative dashboard. Because it is an internal system, access is locked to public visitors, and live runs can be requested via a demonstration.`,
+    category: "web-system",
+    technologies: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "MySQL", "JWT Auth"],
+    image: winterImg,
+    requestDemo: true,
+    features: [
+      "Secure multi-role authentication system with password hashing and JWT sessions.",
+      "Garment production and manufacturing job tracking modules.",
+      "Active inventory management tracking raw materials, fabric supply, and logistics status.",
+      "Audit logs and user activity profiles monitor interface.",
+      "Tailwind CSS v4 styling for clean dashboard interfaces."
     ]
   }
 ];

@@ -28,7 +28,9 @@ const SKILLS_DATA: SkillCategory[] = [
           { title: "inXource Payments Storefront", slug: "inxource-payments-storefront" },
           { title: "Inxource Marketing Website", slug: "inxource-marketing-website" },
           { title: "Drive Metrics Fleet Ecosystem", slug: "drive-metrics-fleet-ecosystem" },
-          { title: "TechRoots Zambia Corporate Website", slug: "techroots-zambia-corporate-website" }
+          { title: "TechRoots Zambia Corporate Website", slug: "techroots-zambia-corporate-website" },
+          { title: "Fivesphere Multi Trade Website", slug: "fivesphere-multi-trade-website" },
+          { title: "Apparel Management System", slug: "apparel-management-system" }
         ]
       },
       {
@@ -49,7 +51,9 @@ const SKILLS_DATA: SkillCategory[] = [
           { title: "Drive Metrics Fleet Ecosystem", slug: "drive-metrics-fleet-ecosystem" },
           { title: "Eduroot School Management System", slug: "eduroot-school-management-system" },
           { title: "TechRoots Zambia Corporate Website", slug: "techroots-zambia-corporate-website" },
-          { title: "Transformative Healing Clinic Website", slug: "transformative-healing-clinic-website" }
+          { title: "Transformative Healing Clinic Website", slug: "transformative-healing-clinic-website" },
+          { title: "Fivesphere Multi Trade Website", slug: "fivesphere-multi-trade-website" },
+          { title: "Apparel Management System", slug: "apparel-management-system" }
         ]
       },
       {
@@ -59,7 +63,8 @@ const SKILLS_DATA: SkillCategory[] = [
           { title: "inXource Payments Storefront", slug: "inxource-payments-storefront" },
           { title: "Inxource Marketing Website", slug: "inxource-marketing-website" },
           { title: "Namar Technologies Corporate Website", slug: "namar-technologies-corporate-website" },
-          { title: "Transformative Healing Clinic Website", slug: "transformative-healing-clinic-website" }
+          { title: "Transformative Healing Clinic Website", slug: "transformative-healing-clinic-website" },
+          { title: "Fivesphere Multi Trade Website", slug: "fivesphere-multi-trade-website" }
         ]
       }
     ]
@@ -155,7 +160,9 @@ const SKILLS_DATA: SkillCategory[] = [
           { title: "Eduroot School Management System", slug: "eduroot-school-management-system" },
           { title: "Namar Technologies Corporate Website", slug: "namar-technologies-corporate-website" },
           { title: "TechRoots Zambia Corporate Website", slug: "techroots-zambia-corporate-website" },
-          { title: "Transformative Healing Clinic Website", slug: "transformative-healing-clinic-website" }
+          { title: "Transformative Healing Clinic Website", slug: "transformative-healing-clinic-website" },
+          { title: "Fivesphere Multi Trade Website", slug: "fivesphere-multi-trade-website" },
+          { title: "Apparel Management System", slug: "apparel-management-system" }
         ]
       }
     ]
@@ -164,19 +171,19 @@ const SKILLS_DATA: SkillCategory[] = [
 
 const SkillsDetail: React.FC = () => {
   return (
-    <div className="min-h-screen pt-28 pb-20 bg-slate-900 text-slate-100">
+    <div className="min-h-screen pt-28 pb-20 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
       <div className="container max-w-5xl mx-auto">
         {/* Navigation & Header */}
         <div className="mb-12">
           <Link
             href="/#skills"
-            className="inline-flex items-center text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors mb-3 group"
+            className="inline-flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-650 dark:hover:text-blue-400 transition-colors mb-3 group"
           >
             <span className="transform group-hover:-translate-x-1 transition-transform mr-1.5">←</span>
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Skills Narrative</h1>
-          <p className="text-slate-400 mt-2">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white transition-colors">Skills Narrative</h1>
+          <p className="text-slate-600 dark:text-slate-400 mt-2 transition-colors">
             An in-depth guide to my technical expertise, capabilities, and practical deployments.
           </p>
         </div>
@@ -186,17 +193,17 @@ const SkillsDetail: React.FC = () => {
           {SKILLS_DATA.map((cat, cIdx) => (
             <section
               key={cIdx}
-              className="p-8 bg-slate-850 rounded-lg border border-slate-800"
+              className="p-8 bg-white dark:bg-slate-850 rounded-lg border border-slate-200 dark:border-slate-800 transition-colors duration-300"
             >
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-white mb-2">{cat.title}</h2>
-                <p className="text-slate-400 text-sm max-w-3xl leading-relaxed">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 transition-colors">{cat.title}</h2>
+                <p className="text-slate-600 dark:text-slate-400 text-sm max-w-3xl leading-relaxed transition-colors">
                   {cat.description}
                 </p>
               </div>
 
               {/* Individual Skills list */}
-              <div className="space-y-8 divide-y divide-slate-800">
+              <div className="space-y-8 divide-y divide-slate-200 dark:divide-slate-800">
                 {cat.skills.map((skill, sIdx) => (
                   <div
                     key={sIdx}
@@ -205,21 +212,21 @@ const SkillsDetail: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* Name */}
                       <div className="md:col-span-1">
-                        <h3 className="text-lg font-semibold text-blue-400">
+                        <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 transition-colors">
                           {skill.name}
                         </h3>
                       </div>
 
                       {/* Details & Project links */}
                       <div className="md:col-span-2 space-y-4">
-                        <p className="text-slate-300 text-sm leading-relaxed">
+                        <p className="text-slate-650 dark:text-slate-300 text-sm leading-relaxed transition-colors">
                           {skill.description}
                         </p>
 
                         {/* Associated Projects */}
                         {skill.projects.length > 0 && (
                           <div className="pt-2">
-                            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+                            <span className="text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider block mb-2 transition-colors">
                               Incorporated In:
                             </span>
                             <div className="flex flex-wrap gap-2">
@@ -227,7 +234,7 @@ const SkillsDetail: React.FC = () => {
                                 <Link
                                   key={pIdx}
                                   href={`/projects/${proj.slug}`}
-                                  className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-xs font-medium text-slate-300 hover:text-white rounded-md border border-slate-750 transition-colors"
+                                  className="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-medium text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white rounded-md border border-slate-200 dark:border-slate-700 transition-colors"
                                 >
                                   💼 {proj.title}
                                 </Link>

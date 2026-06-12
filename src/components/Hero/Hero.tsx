@@ -167,7 +167,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen  relative flex items-center py-20 bg-slate-900 text-white overflow-hidden"
+      className="min-h-screen relative flex items-center py-20 bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-white overflow-hidden transition-colors duration-300"
     >
       {/* Floating Icons Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -191,7 +191,7 @@ const Hero: React.FC = () => {
               <motion.img
                 src={heroPhoto.src}
                 alt="Joshua Sibanda - Software Developer"
-                className="w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[400px] object-cover object-top drop-shadow-2xl rounded-lg border border-slate-700/50 relative z-10"
+                className="w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[400px] object-cover object-top drop-shadow-2xl rounded-lg border border-slate-200 dark:border-slate-700/50 relative z-10 transition-colors duration-300"
                 variants={floatingImageVariants}
                 animate="floating"
               />
