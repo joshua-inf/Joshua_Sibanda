@@ -1,0 +1,2 @@
+allowBuilds:
+  lint: set this to true or false
