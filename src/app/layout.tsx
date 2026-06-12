@@ -1,22 +1,7 @@
 import type { Metadata } from "next";
-import { Poppins, Pacifico } from "next/font/google";
 import Header from "../components/Header";
 import ClientLayout from "./ClientLayout";
 import "../index.css";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
-const pacifico = Pacifico({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-pacifico",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Joshua Sibanda | Portfolio",
@@ -32,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${pacifico.variable} scroll-smooth`}>
+    <html lang="en" className="scroll-smooth">
       <body className="bg-slate-900 text-slate-50 font-body antialiased flex flex-col min-h-screen">
         <ClientLayout>
           <Header />
