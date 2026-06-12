@@ -1,2 +1,7 @@
-allowBuilds:
-  lint: set this to true or false
+packages:
+  - 'packages/*'
+  - 'apps/*'
+
+pnpm:
+  allowBuilds:
+    - lint
